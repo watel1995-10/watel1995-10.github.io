@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultoría para IPRESS | Christian Rojas</title>
+    <title>Categorización de IPRESS | NormaMed Consultores</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,74 +11,113 @@
             padding: 0;
             color: #333;
             line-height: 1.6;
-            background-color: #f9f9f9;
+            background-color: #f4f7f6;
         }
         header {
-            background-color: #1e375a; 
+            background-color: #1a3b5c; 
             color: white;
-            padding: 3rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
-            border-bottom: 5px solid #27ae60;
+            border-bottom: 6px solid #f39c12;
         }
         header h1 {
             margin: 0;
-            font-size: 2.8rem;
+            font-size: 3rem;
+            letter-spacing: 1px;
         }
         header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
+            font-size: 1.3rem;
+            margin-top: 15px;
             font-weight: 300;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .container {
-            width: 85%;
-            max-width: 1200px;
+            width: 90%;
+            max-width: 1100px;
             margin: auto;
             overflow: hidden;
-            padding: 2rem 0;
+            padding: 3rem 0;
         }
         .btn {
             display: inline-block;
-            background: #27ae60;
+            background: #f39c12;
             color: white;
-            padding: 12px 25px;
+            padding: 15px 30px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            margin-top: 20px;
+            font-size: 1.1rem;
+            margin-top: 25px;
             transition: background 0.3s;
         }
         .btn:hover {
-            background: #219150;
+            background: #d68910;
         }
-        /* Sección de Logos */
-        .logos-section {
+        
+        /* Introducción */
+        .intro {
             text-align: center;
-            padding: 2rem 0;
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 3rem;
+            padding: 0 20px;
+        }
+
+        /* Sección de 6 Pasos */
+        .steps-container {
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
         }
-        .logos-section h3 {
-            color: #7f8c8d;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .steps-container h2 {
+            color: #1a3b5c;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
         }
-        .logos-container {
+        .step {
             display: flex;
-            justify-content: center;
-            gap: 50px;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        .step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .step-number {
+            background-color: #f39c12;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            min-width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
             align-items: center;
-            margin-top: 20px;
-            flex-wrap: wrap;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
         }
-        .logos-container img {
-            max-height: 60px;
-            object-fit: contain;
+        .step-content h3 {
+            margin: 0 0 10px 0;
+            color: #1a3b5c;
+            font-size: 1.2rem;
         }
-        /* Módulos de contenido */
-        .grid-2 {
+        .step-content p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Respaldo y Logos */
+        .respaldo-grid {
             display: flex;
             gap: 30px;
             flex-wrap: wrap;
@@ -90,143 +129,151 @@
             flex: 1;
             min-width: 300px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-top: 4px solid #1e375a;
+            border-top: 4px solid #1a3b5c;
         }
-        .box h2 {
-            color: #1e375a;
+        .box h3 {
+            color: #1a3b5c;
             margin-top: 0;
         }
-        /* Tabla de Categorías */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        table, th, td {
-            border: 1px solid #ecf0f1;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            font-size: 0.95rem;
-        }
-        th {
-            background-color: #1e375a;
-            color: white;
-        }
-        tr:nth-child(even) {background-color: #f8f9fa;}
-        /* Enlaces */
-        .enlaces-list {
+        .normativas {
             list-style: none;
             padding: 0;
         }
-        .enlaces-list li {
+        .normativas li {
             margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #555;
+            padding-left: 20px;
+            position: relative;
         }
-        .enlaces-list a {
-            display: block;
-            padding: 15px;
-            background: #ecf0f1;
-            color: #2c3e50;
-            text-decoration: none;
-            border-radius: 5px;
+        .normativas li::before {
+            content: "✔";
+            color: #27ae60;
+            position: absolute;
+            left: 0;
             font-weight: bold;
-            border-left: 5px solid #3498db;
-            transition: all 0.3s;
         }
-        .enlaces-list a:hover {
-            background: #e0e6e8;
-            border-left-color: #2980b9;
+        .logos-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+            margin-top: 20px;
         }
+        .logos-container img {
+            max-height: 60px;
+            object-fit: contain;
+        }
+
         footer {
-            background: #1e375a;
+            background: #1a3b5c;
             color: white;
             text-align: center;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             margin-top: 3rem;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>CR Consultoría Salud</h1>
-        <p>Gestión Normativa y Regulación Sanitaria para IPRESS Públicas y Privadas.</p>
-        <a href="#contacto" class="btn">Asesoría Integral</a>
+        <h1>NormaMed Consultores</h1>
+        <p>Consultoría integral para la Categorización de IPRESS Públicas y Privadas.</p>
+        <a href="#contacto" class="btn">Solicitar Asesoría</a>
     </header>
 
     <div class="container">
         
-        <!-- Sección de Logos e Instituciones -->
-        <div class="logos-section">
-            <h3>Gestión en estricto cumplimiento con las normativas de:</h3>
-            <div class="logos-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Logo_del_Ministerio_de_Salud_del_Per%C3%BA.svg" alt="Ministerio de Salud - MINSA">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Superintendencia_Nacional_de_Salud_%28Per%C3%BA%29_-_Logo.png" alt="SUSALUD">
+        <div class="intro">
+            <p>El proceso de categorización conduce a clasificar los establecimientos de salud, en base a niveles de complejidad y a características funcionales, que permitan responder a las necesidades de salud de la población que atiende. Contamos con profesionales con amplia experiencia en gestión clínica.</p>
+        </div>
+
+        <div class="steps-container">
+            <h2>Nuestro Servicio Integral</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Evaluación inicial del establecimiento</h3>
+                    <p>Visita a la IPRESS y asesoría para la elección de categoría o recategorización, según las necesidades específicas de la institución de salud.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Inicio del proceso de categorización</h3>
+                    <p>Identificación, monitoreo y acompañamiento semanal en los procesos de adecuación y actualización de la clínica para lograr la categorización.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Inscripción o actualización en RENIPRESS</h3>
+                    <p>Actualización sobre los 4 ejes: RRHH, infraestructura, equipamiento y gestión. Solicitud de categorización en el aplicativo oficial del RENIPRESS.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Elaboración del expediente</h3>
+                    <p>Solicitud de categorización en mesa de partes de la DIRIS, y apoyo total en los trámites documentarios relacionados al proceso de evaluación.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Supervisión y acompañamiento</h3>
+                    <p>Acompañamiento presencial durante la visita de supervisión de categorización por parte de nuestro equipo consultor experto.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h3>Informe final y levantamiento de observaciones</h3>
+                    <p>Asesoría para el levantamiento de cualquier observación que pudiera ocurrir en la visita, acompañándote hasta la obtención de la resolución final.</p>
+                </div>
             </div>
         </div>
 
-        <div class="grid-2">
-            <!-- Sección Normativa NTS 021 -->
+        <div class="respaldo-grid">
             <div class="box">
-                <h2>Categorización de Establecimientos (NTS N° 021)</h2>
-                <p>Aseguramos el estricto cumplimiento de la <strong>NTS N° 021-MINSA/DGSP-V.03</strong> y el <strong>Reglamento de Establecimientos de Salud y Servicios Médicos de Apoyo</strong> para evitar sanciones.</p>
-                
-                <table>
-                    <tr>
-                        <th>Categoría</th>
-                        <th>Tipo de Establecimiento (Primer Nivel)</th>
-                    </tr>
-                    <tr>
-                        <td><strong>I-1</strong></td>
-                        <td>Consultorio Médico / Profesional de la Salud (Sin internamiento).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>I-2</strong></td>
-                        <td>Centro Médico / Policlínico / Consultorio con especialidades.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>I-3</strong></td>
-                        <td>Centro de Salud con mayor capacidad resolutiva y laboratorio.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>I-4</strong></td>
-                        <td>Centro de Salud con camas de internamiento de corta estancia.</td>
-                    </tr>
-                </table>
-                <p style="font-size: 0.85rem; color: #7f8c8d; margin-top: 15px;">*Evaluamos la cartera de servicios, infraestructura y equipamiento según tu categoría correspondiente.</p>
+                <h3>Respaldo Técnico y Legal</h3>
+                <p style="font-size: 0.95rem; color: #666;">Nuestros servicios garantizan el estricto cumplimiento normativo vigente:</p>
+                <ul class="normativas">
+                    <li><strong>NT N° 021-MINSA/DGSP V.01</strong> - Norma Técnica de Salud en Categorías de Establecimientos del Sector Salud.</li>
+                    <li><strong>RS. N° 004-2021-SUSALUD/S</strong> - Reglamento para el Registro Nacional de Instituciones Prestadoras de Servicios de Salud.</li>
+                </ul>
             </div>
 
-            <!-- Sección Enlaces y Servicios -->
             <div class="box">
-                <h2>Servicios Administrativos</h2>
-                <ul>
-                    <li>Inscripción y actualización continua en <strong>RENIPRESS</strong>.</li>
-                    <li>Elaboración de expedientes TUPA para recategorizaciones.</li>
-                    <li>Implementación del Plan de Verificación Sanitaria.</li>
-                    <li>Organización técnica del acervo documental administrativo.</li>
-                </ul>
-
-                <h2 style="margin-top: 30px;">Accesos Directos Oficiales</h2>
-                <ul class="enlaces-list">
-                    <li><a href="https://www.dirislimacentro.gob.pe/" target="_blank">Portal DIRIS Lima Centro</a></li>
-                    <li><a href="http://app20.susalud.gob.pe:8080/registro-renipress-webapp/listadoEstablecimientosSalud.htm" target="_blank">Consulta de Registro RENIPRESS</a></li>
-                    <li><a href="https://www.gob.pe/minsa" target="_blank">Ministerio de Salud (MINSA)</a></li>
-                </ul>
+                <h3 style="text-align: center;">Gestión bajo los estándares de:</h3>
+                <div class="logos-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Logo_del_Ministerio_de_Salud_del_Per%C3%BA.svg" alt="Ministerio de Salud - MINSA">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Superintendencia_Nacional_de_Salud_%28Per%C3%BA%29_-_Logo.png" alt="SUSALUD">
+                </div>
             </div>
         </div>
 
-        <div class="box" style="margin-top: 30px; text-align: center;" id="contacto">
-            <h2>Regulariza la situación de tu IPRESS hoy</h2>
-            <p>Con experiencia técnica comprobada en procesos de evaluación y gestión documental en salud.</p>
-            <a href="https://wa.me/51000000000?text=Hola%20Christian,%20deseo%20asesoría%20sobre%20la%20categorización%20de%20mi%20IPRESS" class="btn" style="font-size: 1.2rem; padding: 15px 40px;">Contactar por WhatsApp</a>
+        <div id="contacto" style="text-align: center; margin-top: 4rem; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <h2 style="color: #1a3b5c;">¿Listo para iniciar el proceso en tu IPRESS?</h2>
+            <p style="color: #666; font-size: 1.1rem; margin-bottom: 25px;">Escríbenos directamente para agendar tu evaluación inicial.</p>
+            <!-- RECUERDA CAMBIAR LOS CEROS POR TU NÚMERO DE WHATSAPP -->
+            <a href="https://wa.me/51923498112?text=Hola,%20deseo%20información%20sobre%20el%20servicio%20integral%20de%20categorización%20de%20IPRESS" class="btn" style="padding: 15px 40px; font-size: 1.2rem;">Contactar por WhatsApp</a>
         </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 CR Consultoría Salud | Análisis, Economía y Regulación Sanitaria.</p>
+        <p>&copy; 2026 NormaMed Consultores | Expertos en Categorización de IPRESS .</p>
     </footer>
 
 </body>
 </html>
+
+  
