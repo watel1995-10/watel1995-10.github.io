@@ -104,7 +104,7 @@ nav.links a:hover{color:var(--coral-dark);}
 .float-cards{
   position:relative; z-index:2;
   display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
-  transform:translateY(50%);
+  transform:translateY(56px);
 }
 .float-card{
   background:var(--panel);
@@ -120,7 +120,7 @@ nav.links a:hover{color:var(--coral-dark);}
 
 /* SECTION SPACING (account for floating cards overlap) */
 section{padding:96px 0;}
-.why{padding-top:calc(96px + 70px);}
+.why{padding-top:calc(96px + 56px);}
 .section-head{max-width:620px; margin-bottom:52px;}
 .section-head h2{font-size:clamp(28px,3.4vw,40px); margin-top:14px;}
 .section-head p{color:var(--ink-soft); margin-top:14px; font-size:16px;}
@@ -143,11 +143,11 @@ section{padding:96px 0;}
 
 /* NORMATIVA STRIP */
 .normativa{background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
-.normativa-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
-.norm-card{padding:22px 20px; border-radius:14px; background:var(--bg);}
-.norm-card .mono{font-size:11px; color:var(--indigo); letter-spacing:0.08em;}
-.norm-card h4{font-size:15.5px; margin:8px 0 6px;}
-.norm-card p{font-size:13px; color:var(--ink-soft);}
+.normativa-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+.norm-card{padding:20px 22px; border-radius:14px; background:var(--bg); display:flex; gap:14px; align-items:flex-start;}
+.norm-card .mono{font-size:11px; color:var(--indigo); letter-spacing:0.03em; white-space:nowrap; padding-top:2px;}
+.norm-card h4{font-size:14.5px; margin-bottom:5px;}
+.norm-card p{font-size:12.5px; color:var(--ink-soft); line-height:1.5;}
 
 /* SERVICES */
 .services-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
@@ -188,7 +188,8 @@ section{padding:96px 0;}
 }
 .tramite-card:hover{background:rgba(255,255,255,0.09); border-color:var(--coral);}
 .tramite-card .num{font-family:'Space Mono', monospace; font-size:12px; color:var(--coral); display:block; margin-bottom:14px;}
-.tramite-card h4{color:#fff; font-size:15.5px;}
+.tramite-card h4{color:#fff; font-size:15.5px; margin-bottom:8px;}
+.tramite-card p{color:rgba(255,255,255,0.6); font-size:13px;}
 
 /* TIMELINE */
 .timeline-wrap{display:flex; align-items:flex-start; justify-content:space-between; gap:8px; position:relative;}
@@ -279,7 +280,7 @@ footer{background:#0B1930; color:rgba(255,255,255,0.55); padding:64px 0 28px; fo
 /* RESPONSIVE */
 @media (max-width:1000px){
   .why-grid, .services-grid, .tramites-grid, .stats-grid, .testi-grid, .blog-grid{grid-template-columns:repeat(2,1fr);}
-  .float-cards{grid-template-columns:1fr; transform:translateY(30%);}
+  .float-cards{grid-template-columns:1fr; transform:translateY(40px);}
   .normativa-grid{grid-template-columns:repeat(2,1fr);}
   nav.links{display:none;}
   .map-layout{grid-template-columns:1fr;}
@@ -372,9 +373,12 @@ footer{background:#0B1930; color:rgba(255,255,255,0.55); padding:64px 0 28px; fo
     </div>
 
     <div class="float-cards">
-      <div class="float-card"><span class="emoji">🏥</span><div><h4>Categorización</h4><p>Elección de categoría y expediente RENIPRESS</p></div></div>
+      <div class="float-card"><span class="emoji">🏥</span><div><h4>Categorización</h4><p>Elección de categoría y expediente técnico</p></div></div>
       <div class="float-card"><span class="emoji">📄</span><div><h4>RENIPRESS</h4><p>Registro y actualización ante SUSALUD</p></div></div>
       <div class="float-card"><span class="emoji">📋</span><div><h4>Inicio de Actividades</h4><p>Comunicación formal ante la autoridad sanitaria</p></div></div>
+      <div class="float-card"><span class="emoji">🔄</span><div><h4>Recategorización</h4><p>Actualización de tu categoría vigente</p></div></div>
+      <div class="float-card"><span class="emoji">🧾</span><div><h4>Actualización de Datos</h4><p>RR.HH., director médico, representante legal</p></div></div>
+      <div class="float-card"><span class="emoji">🛠️</span><div><h4>Otros Servicios</h4><p>Retiro voluntario y demás gestiones ante la DIRIS</p></div></div>
     </div>
   </div>
 </section>
@@ -405,10 +409,13 @@ footer{background:#0B1930; color:rgba(255,255,255,0.55); padding:64px 0 28px; fo
       <p>Nos mantenemos actualizados frente a los principales dispositivos que rigen la categorización y funcionamiento de las IPRESS.</p>
     </div>
     <div class="normativa-grid">
-      <div class="norm-card"><span class="mono">NTS N.° 021</span><h4>Categorización de EE.SS.</h4><p>Criterios técnicos para definir la categoría según nivel de complejidad.</p></div>
-      <div class="norm-card"><span class="mono">RENIPRESS</span><h4>Registro Nacional</h4><p>Plataforma de SUSALUD para el registro e inspección de establecimientos.</p></div>
-      <div class="norm-card"><span class="mono">D.S. Salud</span><h4>Condiciones de funcionamiento</h4><p>Requisitos de infraestructura, equipamiento y personal por categoría.</p></div>
-      <div class="norm-card"><span class="mono">DIRIS</span><h4>Autoridad sanitaria</h4><p>Jurisdicción responsable de la inspección y emisión de la resolución.</p></div>
+      <div class="norm-card"><span class="mono">D.S. N.° 013-2006-SA</span><div><h4>Reglamento de EE.SS. y SMA</h4><p>Norma base que regula el funcionamiento de establecimientos de salud y servicios médicos de apoyo.</p></div></div>
+      <div class="norm-card"><span class="mono">R.M. N.° 546-2011/MINSA</span><div><h4>NTS N.° 021-MINSA/DGSP V.03</h4><p>"Categorías de Establecimientos del Sector Salud".</p></div></div>
+      <div class="norm-card"><span class="mono">R.M. N.° 076-2014/MINSA</span><div><h4>Guía Técnica de Categorización</h4><p>Guía técnica para la categorización de establecimientos del sector salud.</p></div></div>
+      <div class="norm-card"><span class="mono">R.M. N.° 660-2014/MINSA</span><div><h4>NTS N.° 110-MINSA/DGIEM V.01</h4><p>Infraestructura y equipamiento del 2do nivel de atención.</p></div></div>
+      <div class="norm-card"><span class="mono">R.M. N.° 045-2015/MINSA</span><div><h4>NTS N.° 113-MINSA/DGIEM V.01</h4><p>Infraestructura y equipamiento del 1er nivel de atención.</p></div></div>
+      <div class="norm-card"><span class="mono">R.M. N.° 862-2015/MINSA</span><div><h4>NTS N.° 119-MINSA/DGIEM V.01</h4><p>Infraestructura y equipamiento del 3er nivel de atención.</p></div></div>
+      <div class="norm-card" style="grid-column:1 / -1;"><span class="mono">R.S. N.° 004-2021-SUSALUD/S</span><div><h4>Reglamento del RENIPRESS</h4><p>Registro Nacional de Instituciones Prestadoras de Servicios de Salud.</p></div></div>
     </div>
   </div>
 </section>
@@ -423,11 +430,10 @@ footer{background:#0B1930; color:rgba(255,255,255,0.55); padding:64px 0 28px; fo
     <div class="services-grid">
       <div class="service-tile"><span class="emoji">🏥</span><h3>Consultorios Médicos</h3><p>Categorización y adecuación para consulta ambulatoria general y especializada.</p></div>
       <div class="service-tile"><span class="emoji">🦷</span><h3>Consultorios Odontológicos</h3><p>Requisitos específicos de bioseguridad e infraestructura odontológica.</p></div>
-      <div class="service-tile"><span class="emoji">🧠</span><h3>Centros de Salud Mental</h3><p>Adecuación normativa para servicios de salud mental comunitaria.</p></div>
-      <div class="service-tile"><span class="emoji">🏨</span><h3>Policlínicos</h3><p>Gestión integral para establecimientos con múltiples especialidades.</p></div>
+      <div class="service-tile"><span class="emoji">🩺</span><h3>Consultorios de Otros Profesionales de la Salud</h3><p>Categorización para nutrición, psicología, obstetricia y demás profesiones de la salud.</p></div>
+      <div class="service-tile"><span class="emoji">🏨</span><h3>Policlínicos y/o Centros Médicos</h3><p>Gestión integral para establecimientos con múltiples especialidades.</p></div>
       <div class="service-tile"><span class="emoji">🏢</span><h3>Clínicas</h3><p>Categorización de mayor complejidad, incluyendo hospitalización y emergencia.</p></div>
-      <div class="service-tile"><span class="emoji">🧪</span><h3>Laboratorios Clínicos</h3><p>Cumplimiento normativo para servicios de análisis clínico y patología.</p></div>
-      <div class="service-tile"><span class="emoji">🩻</span><h3>Centros de Diagnóstico</h3><p>Adecuación para imagenología y servicios de diagnóstico por imágenes.</p></div>
+      <div class="service-tile"><span class="emoji">🧪</span><h3>Laboratorios</h3><p>Cumplimiento normativo para servicios de análisis clínico y patología.</p></div>
       <div class="service-tile"><span class="emoji">🚑</span><h3>Servicios Médicos de Apoyo</h3><p>Categorización de servicios complementarios y de apoyo al diagnóstico.</p></div>
     </div>
   </div>
@@ -441,14 +447,16 @@ footer{background:#0B1930; color:rgba(255,255,255,0.55); padding:64px 0 28px; fo
       <p>Gestionamos el trámite puntual que tu establecimiento requiera ante SUSALUD y la DIRIS.</p>
     </div>
     <div class="tramites-grid">
-      <div class="tramite-card"><span class="num">01</span><h4>RENIPRESS</h4></div>
-      <div class="tramite-card"><span class="num">02</span><h4>Inicio de Actividades</h4></div>
-      <div class="tramite-card"><span class="num">03</span><h4>Cambio de Dirección</h4></div>
-      <div class="tramite-card"><span class="num">04</span><h4>Cambio de Razón Social</h4></div>
-      <div class="tramite-card"><span class="num">05</span><h4>Cambio de Director Médico</h4></div>
-      <div class="tramite-card"><span class="num">06</span><h4>Cambio de Representante Legal</h4></div>
-      <div class="tramite-card"><span class="num">07</span><h4>Recategorización</h4></div>
-      <div class="tramite-card"><span class="num">08</span><h4>Cartera de Servicios</h4></div>
+      <div class="tramite-card"><span class="num">01</span><h4>Categorización (primera vez)</h4><p>Elegimos la categoría correcta y armamos tu expediente técnico completo.</p></div>
+      <div class="tramite-card"><span class="num">02</span><h4>Recategorización</h4><p>Gestionamos el cambio de categoría por variación en tu cartera de servicios o complejidad.</p></div>
+      <div class="tramite-card"><span class="num">03</span><h4>Inicio de Actividades</h4><p>Presentamos la comunicación previa obligatoria antes de operar tu establecimiento.</p></div>
+      <div class="tramite-card"><span class="num">04</span><h4>RENIPRESS</h4><p>Realizamos la inscripción y registro nacional hasta obtener tu código IPRESS.</p></div>
+      <div class="tramite-card"><span class="num">05</span><h4>Actualización de RR.HH.</h4><p>Mantenemos actualizada la relación de tu personal asistencial y administrativo.</p></div>
+      <div class="tramite-card"><span class="num">06</span><h4>Cambio de Director Médico</h4><p>Tramitamos la actualización de datos ante la autoridad sanitaria.</p></div>
+      <div class="tramite-card"><span class="num">07</span><h4>Cambio de Representante Legal</h4><p>Gestionamos la actualización societaria de tu establecimiento.</p></div>
+      <div class="tramite-card"><span class="num">08</span><h4>Cambio de Dirección o Razón Social</h4><p>Actualizamos los datos de tu EESS o SMA ante la DIRIS.</p></div>
+      <div class="tramite-card"><span class="num">09</span><h4>Retiro Voluntario</h4><p>Gestionamos la baja voluntaria de tu establecimiento cuando lo necesites.</p></div>
+      <div class="tramite-card"><span class="num">10</span><h4>Subsanación de Observaciones</h4><p>Elaboramos el levantamiento técnico tras la visita de inspección.</p></div>
     </div>
   </div>
 </section>
